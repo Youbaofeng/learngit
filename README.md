@@ -19,21 +19,21 @@
 
 
 # 工作状态
-> 要随时掌握工作区的状态，使用git status命令。
+> 要随时掌握工作区的状态，使用`git status`命令。
 
-> 如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+> 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
 
 # 版本回退
 > HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`
 
-> 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+> 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
 
-> 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+> 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
 
 # 撤销修改
 > 丢弃工作区的修改时，用命令 `git checkout -- file`
 
-> 撤回暂存区的提交（git add 后），用命令 git reset HEAD <file>
+> 撤回暂存区的提交（git add后），用命令 `git reset HEAD <file>`
 
 > 撤回之后修改退回工作区，然后用 `git checkout -- file` 丢弃修改。
 
@@ -58,21 +58,21 @@
 `$ git clone https:\\abcd..`
 
 # 分支 master dev willyou
-> 查看分支：git branch
+> 查看分支：`git branch`
 
-> 创建分支：git branch <name>
+> 创建分支：`git branch <name>`
 
-> 切换分支：git checkout <name>或者git switch <name>
+> 切换分支：`git checkout <name>`或者`git switch <name>`
 
-> 创建+切换分支：git checkout -b <name>或者git switch -c <name>
+> 创建+切换分支：`git checkout -b <name>`或者`git switch -c <name>`
 
-> 合并某分支到当前分支：git merge <name>
+> 合并某分支到当前分支：`git merge <name>`
 
-> 删除分支：git branch -d <name>
+> 删除分支：`git branch -d <name>`
 
-> 删除没有被合并的分支 git branch -D <name>
+> 删除没有被合并的分支 `git branch -D <name>`
 
-> 查看分支合并: git log
+> 查看分支合并: `git log`
 
 ## 分支策略
 > 1 master
@@ -112,23 +112,23 @@
 
 # 标签管理
 ## 创建标签
-> 命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id : git tag v0.9 f52c633
+> 命令`git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id : `git tag v0.9 f52c633`
 
-> 命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+> 命令`git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
 
-> 命令git tag可以查看所有标签。
+> 命令`git tag可以查看所有标签。
 
 ## 操作标签
-> 命令git push origin <tagname>可以推送一个本地标签；
+> 命令`git push origin <tagname>`可以推送一个本地标签；
 
-> 命令git push origin --tags可以推送全部未推送过的本地标签；
+> 命令`git push origin --tags`可以推送全部未推送过的本地标签；
 
-> 命令git tag -d <tagname>可以删除一个本地标签；
+> 命令`git tag -d <tagname>`可以删除一个本地标签；
 
-> 命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+> 命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签。
 
 ## Git配置 
-> eg: $ git config --global color.ui true
+> eg: `$ git config --global color.ui true`
 ## 忽略文件
 > 忽略某些文件时，需要编写.gitignore；
 
